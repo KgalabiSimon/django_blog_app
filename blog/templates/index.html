@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>Welcome to Tech Blog, a website developed by <em>Kgalabi Mongatane</em>!</p>
+  <h2>Dynamic content</h2>
+  <p>The Blog has the following record counts:</p>
+  <ul>
+    <li><strong>Blogs:</strong> {{ num_blogs }}</li>
+    <li><strong>Bloggers:</strong> {{ num_bloggers }}</li>
+    <li><strong>Comments Made:</strong> {{ num_comments}}</li>
+  </ul>
+{% endblock %}
