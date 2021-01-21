@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
+from django.views import generic
+
 from blog.models import BlogAuthor, Blog, Comment
+from django.views.generic import ListView, DetailView
 
 
 def index(request):
@@ -19,4 +22,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-
+class BlogListView(generic.ListView):
+    """View class for listing all blog post"""
+    model = Blog

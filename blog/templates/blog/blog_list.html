@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>All Blogs</h1>
+{% if blog_list %}
+    {% for blog in blog_list %}
+        <ul>
+            <li><a href=" ">{{blog.title}}</a>({{blog.pub_date}})-<a href=" ">{{blog.blogger.first_name}}</a></li>
+        </ul>
+
+    {% endfor %}
+
+{% else %}
+There are no blogs.
+
+{% endif %}
+{% endblock %}
