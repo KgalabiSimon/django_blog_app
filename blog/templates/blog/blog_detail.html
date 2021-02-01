@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+
+    <hi>{{blog.title}}</hi>
+    <p><strong>Post date </strong>{{blog.pub_date}}</p>
+    <p><strong>Author </strong>{{blog.blogger.first_name}}</p>
+    <strong>Description</strong>
+    <p>{{blog.body}}</p>
+
+        <h4>Comments</h4>
+
+        {% for comment in comment %}
+            <ul>
+                {% if blog.title == comment.blog.title %}
+                <hr>
+                <li>{{comment.author}}-{{comment.body}}</li>
+                 {% endif %}
+            </ul>
+
+        {% endfor %}
+        {% if user.is_authenticated %}
+            <p><a href=" ">add new comment </a></p>
+        {% else %}
+            <a href="{% url 'login'%}">Click here to login again.</a>
+        {% endif %}
+
+
+{% endblock %}

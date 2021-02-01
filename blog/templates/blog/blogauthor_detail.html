@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+
+    <h1>Blogger </h1><p>{{blogauthor.first_name}}<a href="">{{blogs.tile}}</a></p>
+    <h4>Bio</h4>
+    <p>{{blogauthor.bio}}</p>
+
+
+        <h4>Blog List</h4>
+        <ul>
+            {% for blog in blog %}
+                {% if blog.blogger.first_name == blogauthor.first_name %}
+                    <li><a href=" ">{{blog.title}}</a>({{blog.pub_date}})</li>
+                {% endif %}
+             {% endfor %}
+        </ul>
+
+
+
+{% endblock %}
