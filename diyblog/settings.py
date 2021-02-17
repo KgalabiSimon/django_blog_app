@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '75v6(a!mr2e@cemv$u&bg5%n)_^cu%e5(h@o#^j$6o7kx@q-h9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'false'
+#DEBUG = 'false'
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 ALLOWED_HOSTS = [
-    'https://blooming-hamlet-42730.herokuapp.com/'
+    'blooming-hamlet-42730.herokuapp.com/'
 ]
 
 # Application definition
