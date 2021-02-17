@@ -30,7 +30,7 @@ SECRET_KEY = '75v6(a!mr2e@cemv$u&bg5%n)_^cu%e5(h@o#^j$6o7kx@q-h9'
 
 
 ALLOWED_HOSTS = [
-    'blooming-hamlet-42730.herokuapp.com/'
+    'https://blooming-hamlet-42730.herokuapp.com/'
 ]
 
 # Application definition
@@ -143,3 +143,8 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
