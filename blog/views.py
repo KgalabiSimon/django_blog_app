@@ -11,7 +11,6 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
-@login_required
 def index(request):
     """View function for Home page site"""
     # Generate counts of some of the main objects
