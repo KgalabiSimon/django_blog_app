@@ -30,7 +30,7 @@ SECRET_KEY = '75v6(a!mr2e@cemv$u&bg5%n)_^cu%e5(h@o#^j$6o7kx@q-h9'
 
 
 ALLOWED_HOSTS = [
-    'https://blooming-hamlet-42730.herokuapp.com/'
+    'blooming-hamlet-42730.herokuapp.com/'
 ]
 
 # Application definition
